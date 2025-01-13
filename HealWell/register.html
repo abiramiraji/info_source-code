@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OP Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css2/register-style.css">
+    <style>
+        .mic-button {
+            cursor: pointer;
+            background-color: orange;
+            border: none;
+            border-radius: 50%;
+            padding: 4px;
+            color: white;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-header h2 {
+            color: #333;
+        }
+        .registration-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <div class="form-header">
+            <h2>PATIENT REGISTRATION FORM</h2>
+        </div>
+        <form class="registration-form">
+            <h3>Personal Details</h3>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('first_name')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('last_name')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="text" id="age" name="age" placeholder="Age" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('age')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="input-wrapper">
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="text" id="email" name="email" placeholder="Email" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('email')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="input-wrapper">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('phone')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="text" id="dob" name="dob" placeholder="Date of Birth (DD-MM-YYYY)" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('dob')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="address" name="address" placeholder="Address" required></textarea>
+                    <button type="button" class="mic-button" onclick="startRecognition('address')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+
+            <h3>Emergency Contact Details</h3>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="text" id="emergency_first_name" name="emergency_first_name" placeholder="First Name" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('emergency_first_name')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="relationship" name="relationship" placeholder="Relationship" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('relationship')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="tel" id="emergency_phone" name="emergency_phone" placeholder="Phone Number" required>
+                    <button type="button" class="mic-button" onclick="startRecognition('emergency_phone')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+
+            <h3>Additional Information</h3>
+            <div class="form-group">
+                <label>Do you have any known allergies?</label><br>
+                <div class="input-wrapper"><br>
+                    <textarea id="allergies" name="allergies" placeholder="Please list any known allergies"></textarea>
+                    <button type="button" class="mic-button" onclick="startRecognition('allergies')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Are you currently taking any medications?</label><br>
+                <div class="radio-group">
+                    <input type="radio" id="med_yes" name="medications" value="yes" required>
+                    <label for="med_yes">Yes</label>
+                    <input type="radio" id="med_no" name="medications" value="no">
+                    <label for="med_no">No</label><br>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="medication_details" name="medication_details"placeholder="If yes, please list them here"></textarea>
+                    <button type="button" class="mic-button" onclick="startRecognition('medication_details')">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+         
+
+        // Check for Web Speech API support
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (!SpeechRecognition) {
+            alert("Sorry, your browser does not support voice recognition.");
+        } else {
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            let currentInputId = '';
+            
+            // Function to start recognition
+            function startRecognition(inputId) {
+                currentInputId = inputId;
+                recognition.start();
+            }
+
+            // Handle recognition result
+            recognition.onresult = (event) => {
+                const speechToText = event.results[0][0].transcript;
+                document.getElementById(currentInputId).value = speechToText;
+            };
+
+            recognition.onerror = (event) => {
+                console.error("Speech recognition error:", event.error);
+                alert("An error occurred: " + event.error);
+            };
+
+            recognition.onspeechend = () => {
+                recognition.stop();
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - HealWell</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css2/style2.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">HealWell</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We're here to help. Please feel free to contact us with any questions or concerns.</p>
+
+        <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Call Us</h3>
+                <p>1(234) 567-8910</p>
+                <p>1(234) 987-6543</p>
+            </div>
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p>121 Rock Street,<br> 21 Avenue, New York,<br> NY 92103-9000</p>
+            </div>
+            <div class="contact-item">
+                <h3>Hours</h3>
+                <p>Mon-Fri 11am-8pm</p>
+                <p>Sat, Sun 6am-8pm</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
