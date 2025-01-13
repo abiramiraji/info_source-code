@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: "Open Sans", serif;
+}
+section{
+    min-height: 100vh;
+    background-image: url("../image/img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+
+}
+nav{
+    height: 80px;
+    
+}
+nav h1{
+    float:left;
+    line-height: 80px;
+    font-size: 35px;
+    font-size: inline;
+    color:rgb(72, 45, 98);
+}
+nav ul{
+    float: right;
+    line-height: 80px;
+
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    padding: 0px 5px;
+}
+nav ul li a{
+    color:darkblue;
+    font-size:20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 7px 8px;
+}
+nav ul li a:hover{
+    background-color:bisque;
+    transition: 0.5s ease;
+}
+nav ul li .active{
+    background-color: bisque;
+}
+.article{
+    width: 50%;
+    margin: auto;
+    text-align:left;
+    transform:translateY(10vh);
+}
+.article h1{
+    font-size: 36px;
+    color: rgb(57, 21, 90);
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    margin-bottom: 25px;
+     
+}
+.article p{
+    font-size: 25px;
+    color:darkblue;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    font-style: oblique;
+    
+}
+
+.article .btn{
+    color: blueviolet;
+    padding: 12px 25px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: bisque;
+}
+.article .btn:hover{
+    background-color:darksalmon;
+    transition: 0.5s ease;
+}   
